@@ -2,6 +2,7 @@
 
 require "pg"
 require "csv"
+require "fileutils"
 
 # Filter distributes words to white and grey lists
 class Filter
@@ -40,6 +41,23 @@ class Filter
       puts(format("Genera dictionaries %s", i)) if (i % 100_000).zero?
       next if genera_problems?(row[0])
       grey?(row[0].downcase) ? grey_genera(grey, row) : white << row
+    end
+    grey.close
+    white.close
+  end
+
+  def prepare_uninomials
+    puts "Making uninomials dictionaries"
+    grey = CSV.open(File.join(__dir__, "dict", "grey",
+                              "uninomials.csv"), "w:utf-8")
+    white = CSV.open(File.join(__dir__, "dict", "white",
+                               "uninomials.csv"), "w:utf-8")
+    un = CSV.open(File.join(__dir__, "data", "uninomials.csv"))
+    un.each_with_index do |row, i|
+      i += 1
+      puts(format("Uninomial dictionaries %s", i)) if (i % 100_000).zero?
+      next if genera_problems?(row[0])
+      grey?(row[0].downcase) ? grey << row : white << row
     end
     grey.close
     white.close
@@ -128,6 +146,9 @@ class Filter
   end
 end
 
+FileUtils.cp(File.join(__dir__, "data", "common-eu-words.txt"),
+            File.join(__dir__, "dict", "common"))
 f = Filter.new
+f.prepare_uninomials
 f.prepare_genera
 f.prepare_species
