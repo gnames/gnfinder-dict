@@ -47,11 +47,9 @@ class Filter
 
   private
 
-  def genera_problems?(sp)
-    if @gen_black.key?(sp.downcase)
-      puts sp
-      true
-    end
+  def genera_problems?(gen)
+    return true if gen[-1] == "."
+    return true if @gen_black.key?(gen.downcase)
     false
   end
 
@@ -63,6 +61,7 @@ class Filter
       res[can] = 1 unless res.key?(can)
       next if words.size < 3
       words[1..-1].each do |w|
+        next if w.size < 3
         name = [words[0], w].join(" ")
         res[name] = 1 unless res.key?(name)
       end
