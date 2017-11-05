@@ -4054,7 +4054,6 @@ atlantes
 atlantic
 atlantis
 atlas
-atlas
 atli
 atm.
 atman
@@ -5344,7 +5343,6 @@ batavia
 batch
 bate
 bateau
-bates
 bates
 batfish
 batfowl
@@ -10230,6 +10228,7 @@ chemotherapy
 chemotropism
 chemulpo
 chemurgy
+chen
 chen
 chenab
 chengteh
@@ -23026,6 +23025,7 @@ fue
 fuegian
 fuego
 fuel
+fuentes
 fuera
 fueron
 fuerte
@@ -23537,6 +23537,7 @@ garble
 garbo
 garboard
 garboil
+garcia
 garcon
 gard
 garda
@@ -26831,6 +26832,7 @@ herpetology
 herr
 herren
 herrenvolk
+herrera
 herrera
 herrick
 herring
@@ -30696,6 +30698,7 @@ ivory-white
 ivy
 iwis
 iwo
+ix
 ixia
 ixion
 ixtle
@@ -32235,6 +32238,7 @@ kunlun
 kunming
 kunstlied
 kunth
+kunze
 kunzite
 kuomintang
 kuopio
@@ -33662,7 +33666,6 @@ linkwork
 linlithgow
 linn
 linnaeus
-linnaeus
 linnean
 linnet
 linocut
@@ -35015,6 +35018,7 @@ manager
 managerial
 managing
 managua
+manaia
 manakin
 manama
 manana
@@ -36298,6 +36302,7 @@ mewl
 mews
 mexicali
 mexican
+mexicana
 mexico
 meyerbeer
 meyerhof
@@ -37436,6 +37441,7 @@ morphophonemics
 morphosis
 morrer
 morreu
+morris
 morris
 morrison
 morrow
@@ -38659,6 +38665,7 @@ nickname
 nicobarese
 nicodemus
 nicolai
+nicolaus
 nicolson
 nicosia
 nicotiana
@@ -42958,6 +42965,7 @@ phytology
 phytopathology
 phytophagous
 phytoplankton
+phytoplasma
 phytosociology
 pi
 piacciono
@@ -48680,6 +48688,7 @@ sa
 saadi
 saar
 saarinen
+saavedra
 sab.
 saba
 sabadell
@@ -49352,6 +49361,7 @@ scaffolding
 scag
 scagliola
 scala
+scala
 scalable
 scalade
 scalage
@@ -49364,6 +49374,7 @@ scaleboard
 scalene
 scalenus
 scaler
+scales
 scales
 scaliger
 scallion
@@ -52680,6 +52691,7 @@ speedway
 speedwell
 speedwriting
 speedy
+spegazzini
 speiss
 spelaean
 speleology
@@ -55363,6 +55375,7 @@ tananarive
 tanbark
 tancred
 tandem
+tandilia
 tang
 tanga
 tanganyika
@@ -55745,6 +55758,7 @@ telium
 tell
 tellement
 teller
+telleria
 telling
 telltale
 tellurate
@@ -56540,6 +56554,7 @@ thumbtack
 thump
 thumping
 thun
+thunberg
 thunder
 thunderbolt
 thunderclap
@@ -60017,6 +60032,8 @@ venous
 vent
 ventage
 ventail
+ventana
+ventania
 venter
 ventilate
 ventilation
