@@ -14,18 +14,18 @@ class Dict
     total = { uninomials: 0, genera: 0, species: 0 }
     @canonical.each_with_index do |c, i|
       i += 1
-      puts(format("Process %s canonicals", i)) if (i % 1000).zero?
-      next if c =~ /×/
+      puts(format("Process %s canonicals", i)) if (i % 1_000_000).zero?
+      next if c.match("×")
       words = c.split(" ")
       words.each_with_index do |w, j|
         if words.size == 1
           uninomials.key?(w) ? uninomials[w] += 1 : uninomials[w] = 1
           total[:uninomials] += 1
         elsif j.zero?
-          genera.key?(w) ? genera[w] += 1 : genera[2] = 1
+          genera.key?(w) ? genera[w] += 1 : genera[w] = 1
           total[:genera] += 1
         else
-          species.key(w) ? species[w] += 1 : species[w] = 1
+          species.key?(w) ? species[w] += 1 : species[w] = 1
           total[:species] += 1
         end
       end
@@ -55,7 +55,7 @@ class Dict
       src.each do |k, v|
         csv << [k, v]
       end
-      src.close
+      csv.close
     end
   end
 end
