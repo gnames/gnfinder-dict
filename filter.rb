@@ -153,8 +153,8 @@ class Filter
   end
 end
 
-f.copy_files
 f = Filter.new
+f.copy_files
 f.prepare_uninomials
 f.prepare_genera
 f.prepare_species
