@@ -63,6 +63,13 @@ class Filter
     white.close
   end
 
+  def copy_files
+    FileUtils.cp(File.join(__dir__, "data", "species-black.txt"),
+                 File.join(__dir__, "dict", "black", "species.txt"))
+    FileUtils.cp(File.join(__dir__, "data", "genera-black.txt"),
+                 File.join(__dir__, "dict", "black", "genera.txt"))
+  end
+
   private
 
   def genera_problems?(gen)
@@ -146,8 +153,7 @@ class Filter
   end
 end
 
-FileUtils.cp(File.join(__dir__, "data", "common-eu-words.txt"),
-            File.join(__dir__, "dict", "common"))
+f.copy_files
 f = Filter.new
 f.prepare_uninomials
 f.prepare_genera
