@@ -65,9 +65,9 @@ class Filter
 
   def copy_files
     FileUtils.cp(File.join(__dir__, "data", "species-black.txt"),
-                 File.join(__dir__, "dict", "black", "species.txt"))
+                 File.join(__dir__, "dict", "black", "species.csv"))
     FileUtils.cp(File.join(__dir__, "data", "genera-black.txt"),
-                 File.join(__dir__, "dict", "black", "genera.txt"))
+                 File.join(__dir__, "dict", "black", "genera.csv"))
   end
 
   private
