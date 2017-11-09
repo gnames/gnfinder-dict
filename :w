@@ -83,12 +83,11 @@ class Filter
   end
 
   def grey_genera(grey_species, grey, row)
-    grey << row
-    return unless @canonical.key?(row[0])
-
     res = {}
+    grey << row
     @canonical[row[0]].each do |can|
       words = can.split(" ")
+      next if words.size == 1
       res[can] = 1 unless res.key?(can)
       next if words.size < 3
       words[1..-1].each do |w|
