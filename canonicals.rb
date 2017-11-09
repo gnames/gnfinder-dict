@@ -21,7 +21,7 @@ class Canonicals
                         JOIN name_string_indices nsi
                           ON nsi.name_string_id = ns.id
                       WHERE canonical is not NULL and data_source_id IN
-                        (SELECT id FROM data_sources WHERE is_curated = TRUE")
+                        (SELECT id FROM data_sources WHERE is_curated = TRUE)")
     f = open(File.join(__dir__, "data", "canonicals.txt"),
              "w:utf-8")
     res.each_with_index do |row, i|
