@@ -19,7 +19,7 @@ class Dict
       next if c.match("×")
       words = c.split(" ")
       words.each_with_index do |w, j|
-        if words.size == 1 && !gen_dict.key?(w.upcase)
+        if words.size == 1 && !gen_dict.key?(w)
           uninomials.key?(w) ? uninomials[w] += 1 : uninomials[w] = 1
           total[:uninomials] += 1
         elsif words.size == 1 || j.zero?

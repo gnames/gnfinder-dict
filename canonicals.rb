@@ -20,7 +20,7 @@ class Canonicals
              "w:utf-8")
     res.each_with_index do |row, i|
       i += 1
-      puts format("Row %s", i) if (i % 100_000).zero?
+      puts format("Canonicals row %s", i) if (i % 100_000).zero?
       f.write(row["canonical"] + "\n") if row["canonical"]
     end
     f.close
@@ -33,13 +33,12 @@ class Canonicals
                          ON nsi.name_string_id = ns.id
                      WHERE rank='genus' AND data_source_id = 8
                        AND canonical IS NOT NULL
-                       ORDER BY genus")
-    f = open(File.join(__dir__, "data", "genera.txt"),
-             "w:utf-8")
+                       ORDER BY canonical")
+    f = open(File.join(__dir__, "data", "genera.txt"), "w:utf-8")
     res.each_with_index do |row, i|
       i += 1
-      puts format("Row %s", i) if (i % 100_000).zero?
-      genus = delete("× ", row["genus"])
+      puts format("Genera row %s", i) if (i % 100_000).zero?
+      genus = row["canonical"].delete("× ")
       f.write(genus + "\n")
     end
     f.close
@@ -48,4 +47,5 @@ end
 
 c = Canonicals.new
 
+c.genera
 c.canonicals
