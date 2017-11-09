@@ -8,6 +8,7 @@ class Dict
   end
 
   def dict
+    gen_dict = genera_dict
     uninomials = {}
     genera = {}
     species = {}
@@ -18,10 +19,10 @@ class Dict
       next if c.match("×")
       words = c.split(" ")
       words.each_with_index do |w, j|
-        if words.size == 1
+        if words.size == 1 && !gen_dict.key?(w.upcase)
           uninomials.key?(w) ? uninomials[w] += 1 : uninomials[w] = 1
           total[:uninomials] += 1
-        elsif j.zero?
+        elsif words.size == 1 || j.zero?
           genera.key?(w) ? genera[w] += 1 : genera[w] = 1
           total[:genera] += 1
         else
@@ -57,6 +58,19 @@ class Dict
       end
       csv.close
     end
+  end
+
+  def genera_dict
+    res = {}
+    open(File.join(__dir__, "data", "genera.txt")).each_with_index do |g, i|
+      i += 1
+      puts(format("Making genera dictionary %s", i)) if (i % 1_000_000).zero?
+      g = g.strip
+      words = g.split(" ")
+      puts words if words.size > 1
+      res[g] = 1 unless res.key?(g)
+    end
+    res
   end
 end
 

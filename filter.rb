@@ -123,7 +123,7 @@ class Filter
     res = {}
     open(File.join(__dir__, "data", "canonicals.txt")).each_with_index do |c, i|
       i += 1
-      puts(format("Making canonical %s", i)) if (i % 1_000_000).zero?
+      puts(format("Making canonical dictionary %s", i)) if (i % 1_000_000).zero?
       next if c.match("×")
       c = c.strip
       words = c.split(" ")

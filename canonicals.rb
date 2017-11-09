@@ -25,6 +25,25 @@ class Canonicals
     end
     f.close
   end
+
+  def genera
+    res = @db.exec("SELECT DISTINCT canonical
+                     FROM name_strings ns
+                       JOIN name_string_indices nsi
+                         ON nsi.name_string_id = ns.id
+                     WHERE rank='genus' AND data_source_id = 8
+                       AND canonical IS NOT NULL
+                       ORDER BY genus")
+    f = open(File.join(__dir__, "data", "genera.txt"),
+             "w:utf-8")
+    res.each_with_index do |row, i|
+      i += 1
+      puts format("Row %s", i) if (i % 100_000).zero?
+      genus = delete("× ", row["genus"])
+      f.write(genus + "\n")
+    end
+    f.close
+  end
 end
 
 c = Canonicals.new
