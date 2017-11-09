@@ -145,6 +145,10 @@ class Filter
       w = w.strip
       res.key?(w) ? res[w] += 1 : res[w] = 1
     end
+    open(File.join(__dir__, "data", "uninomials-black.txt")).each do |w|
+      w = w.strip
+      res.key?(w) ? res[w] += 1 : res[w] = 1
+    end
     res
   end
 
