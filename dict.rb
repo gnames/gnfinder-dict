@@ -23,8 +23,14 @@ class Dict
           uninomials.key?(w) ? uninomials[w] += 1 : uninomials[w] = 1
           total[:uninomials] += 1
         elsif words.size == 1 || j.zero?
-          genera.key?(w) ? genera[w] += 1 : genera[w] = 1
-          total[:genera] += 1
+          if gen_dict.key?(w)
+            genera.key?(w) ? genera[w] += 1 : genera[w] = 1
+            total[:genera] += 1
+          else
+            uninomials.key?(w) ? uninomials[w] += 1 : uninomials[w] = 1
+            total[:uninomials] += 1
+            next
+          end
         else
           species.key?(w) ? species[w] += 1 : species[w] = 1
           total[:species] += 1

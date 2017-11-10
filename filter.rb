@@ -8,7 +8,7 @@ require "fileutils"
 class Filter
   def initialize
     @sp_black = sp_black
-    @gen_black = gen_black
+    @uninom_black = uninom_black
     @common_words = common_words
     @canonical = canonical
   end
@@ -37,8 +37,8 @@ class Filter
                               "genera.csv"), "w:utf-8")
     white = CSV.open(File.join(__dir__, "dict", "white",
                                "genera.csv"), "w:utf-8")
-    sp = CSV.open(File.join(__dir__, "data", "genera.csv"))
-    sp.each_with_index do |row, i|
+    gen = CSV.open(File.join(__dir__, "data", "genera.csv"))
+    gen.each_with_index do |row, i|
       i += 1
       puts(format("Genera dictionaries %s", i)) if (i % 100_000).zero?
       next if genera_problems?(row[0])
@@ -68,8 +68,6 @@ class Filter
   def copy_files
     FileUtils.cp(File.join(__dir__, "data", "species-black.txt"),
                  File.join(__dir__, "dict", "black", "species.csv"))
-    FileUtils.cp(File.join(__dir__, "data", "genera-black.txt"),
-                 File.join(__dir__, "dict", "black", "genera.csv"))
     FileUtils.cp(File.join(__dir__, "data", "uninomials-black.txt"),
                  File.join(__dir__, "dict", "black", "uninomials.csv"))
   end
@@ -78,7 +76,7 @@ class Filter
 
   def genera_problems?(gen)
     return true if gen[-1] == "."
-    return true if @gen_black.key?(gen.downcase)
+    return true if @uninom_black.key?(gen.downcase)
     false
   end
 
@@ -89,10 +87,17 @@ class Filter
     res = {}
     @canonical[row[0]].each do |can|
       words = can.split(" ")
-      res[can] = 1 unless res.key?(can)
-      next if words.size < 3
+      bad_species = false
       words[1..-1].each do |w|
-        next if w.size < 3
+        if species_problems?(w)
+          bad_species = true
+          break
+        end
+      end
+      res[can] = 1 unless res.key?(can) || bad_species
+      next if words.size < 3 || (words[1] && species_problems?(words[1]))
+      words[1..-1].each do |w|
+        next if w.size < 3 || species_problems?(w)
         name = [words[0], w].join(" ")
         res[name] = 1 unless res.key?(name)
       end
@@ -139,12 +144,8 @@ class Filter
     res
   end
 
-  def gen_black
+  def uninom_black
     res = {}
-    open(File.join(__dir__, "data", "genera-black.txt")).each do |w|
-      w = w.strip
-      res.key?(w) ? res[w] += 1 : res[w] = 1
-    end
     open(File.join(__dir__, "data", "uninomials-black.txt")).each do |w|
       w = w.strip
       res.key?(w) ? res[w] += 1 : res[w] = 1
