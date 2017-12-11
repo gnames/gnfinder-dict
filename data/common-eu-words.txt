@@ -1,4 +1,11 @@
 a
+thoa
+fama
+colusa
+jardine
+zella
+cares
+colea
 a'
 a-
 a.p.
@@ -9973,6 +9980,7 @@ careful
 careless
 carena
 carers
+cares
 caress
 caressive
 caret
@@ -10655,6 +10663,7 @@ cense
 censer
 censor
 censorious
+censors
 censorship
 censurable
 censure
@@ -12033,6 +12042,7 @@ cita
 citadel
 citation
 cite
+cited
 cithara
 citharoedus
 cither
@@ -12983,6 +12993,7 @@ comedy
 comely
 comenius
 comer
+comes
 comestible
 comet
 cometaria
@@ -15701,6 +15712,7 @@ cypriot
 cypripedium
 cyprus
 cypsela
+cyrano
 cyrenaic
 cyrenaica
 cyrene
@@ -18845,6 +18857,7 @@ dormouse
 dorn
 dornick
 doronicum
+dorothea
 dorp
 dorpat
 dors
@@ -22828,6 +22841,7 @@ fare
 fare-thee-well
 farei
 faremo
+fares
 farewell
 farfetched
 fari
@@ -26776,6 +26790,7 @@ goel
 goer
 goering
 goerlitz
+goes
 goethe
 goethite
 goffer
@@ -34362,6 +34377,7 @@ karma
 karmadharaya
 karmouth
 karnak
+karnes
 kaross
 karrer
 karrie
@@ -36159,6 +36175,7 @@ leiden
 leider
 leigh
 leighton
+leila
 leinster
 leiodermia
 leipzig
@@ -37005,6 +37022,7 @@ livro
 livy
 lixiviate
 lixivium
+liza
 lizard
 lizardfish
 lizards
@@ -37190,6 +37208,7 @@ loir-et-cher
 loire
 loire-atlantique
 loiret
+lois
 loiter
 loja
 loki
@@ -38161,6 +38180,7 @@ makeup
 makeweight
 makeyevka
 makhachkala
+maki
 making
 makings
 makkah
@@ -42601,6 +42621,7 @@ nit
 nit-picking
 niter
 niters
+nites
 nitid
 nitons
 nitramine
@@ -44418,6 +44439,7 @@ otidia
 otilia
 otina
 otiose
+otis
 otitis
 oto-
 otocyst
@@ -45190,6 +45212,7 @@ palmistry
 palmitate
 palmitin
 palmy
+palmyra
 palomino
 palos
 paloverde
@@ -57718,6 +57741,7 @@ sparrowgrass
 sparry
 spars
 sparse
+sparta
 spartacus
 spartan
 sparteine
@@ -62481,6 +62505,7 @@ tollbooth
 tollgate
 tollhouse
 tolly
+tolono
 tolowa
 tolu
 toluate
@@ -65593,6 +65618,7 @@ varix
 varlet
 varletry
 varmint
+varna
 varnish
 varro
 vars
