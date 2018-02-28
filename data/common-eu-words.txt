@@ -1,11 +1,4 @@
 a
-thoa
-fama
-colusa
-jardine
-zella
-cares
-colea
 a'
 a-
 a.p.
@@ -7145,6 +7138,7 @@ blameless
 blameworthy
 blan
 blanc
+blanca
 blanch
 blanchard
 blancmange
@@ -12770,6 +12764,7 @@ cold-blooded
 cold-hearted
 cold-shoulder
 cole
+colea
 colectomy
 colemanite
 coleopteran
@@ -12946,6 +12941,7 @@ columnar
 columniation
 columnist
 colure
+colusa
 colvin
 coly
 colza
@@ -14157,6 +14153,7 @@ corchorus
 corcovado
 corcyra
 cord
+corda
 cordage
 cordaites
 cordate
@@ -22745,6 +22742,7 @@ falta
 faltboat
 falter
 fam.
+fama
 famagusta
 fame
 famed
@@ -28679,6 +28677,7 @@ hawthorn
 hawthorne
 hay
 haya
+hayata
 hayato
 haycock
 hayden
@@ -33636,6 +33635,7 @@ japonic
 japonica
 jaques-dalcroze
 jar
+jardine
 jardiniere
 jargon
 jargonize
@@ -53624,6 +53624,7 @@ sagittal
 sagittarius
 sagittate
 sago
+sagra
 sagst
 sagt
 sagte
@@ -61906,6 +61907,7 @@ thistly
 thither
 thitherto
 tho
+thoa
 thole
 tholi
 tholos
@@ -68284,6 +68286,7 @@ xerox
 xerus
 xhosa
 xi
+xia
 ximenes
 ximenez
 xinca
@@ -68616,6 +68619,7 @@ zeitgeist
 zelda
 zelkova
 zell
+zella
 zemi
 zemstvo
 zen
