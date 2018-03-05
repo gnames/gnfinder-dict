@@ -164,6 +164,8 @@ sea
 seahorse
 sec
 secondary
+sect
+section
 see
 seed
 seems
@@ -177,6 +179,7 @@ specimens
 ss
 st
 strains
+subsp
 summarized
 symbiont
 symbionts
