@@ -69,6 +69,8 @@ class Filter
                  File.join(__dir__, "dict", "black", "species.csv"))
     FileUtils.cp(File.join(__dir__, "data", "uninomials-black.txt"),
                  File.join(__dir__, "dict", "black", "uninomials.csv"))
+    FileUtils.cp(File.join(__dir__, "data", "common-eu-words.txt"),
+                 File.join(__dir__, "dict", "common", "eu.csv"))
   end
 
   private
