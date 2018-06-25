@@ -73,7 +73,7 @@ class Dict
       puts(format("Making genera dictionary %s", i)) if (i % 1_000_000).zero?
       g = g.strip
       words = g.split(" ")
-      puts words if words.size > 1
+      puts "Bad genera #{words.join(' ')}" if words.size > 1
       res[g] = 1 unless res.key?(g)
     end
     res
