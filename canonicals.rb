@@ -16,18 +16,18 @@ class Canonicals
 
   def canonicals
     # res = @db.exec("SELECT DISTINCT canonical FROM name_strings")
-    res = @db.exec("SELECT DISTINCT canonical
+    res = @db.exec("SELECT name
                       FROM name_strings ns
                         JOIN name_string_indices nsi
                           ON nsi.name_string_id = ns.id
                       WHERE canonical is not NULL and data_source_id IN
                         (SELECT id FROM data_sources WHERE is_curated = TRUE)")
-    f = open(File.join(__dir__, "data", "canonicals.txt"),
+    f = open(File.join(__dir__, "data", "names.txt"),
              "w:utf-8")
     res.each_with_index do |row, i|
       i += 1
       puts format("Canonicals row %s", i) if (i % 100_000).zero?
-      f.write(row["canonical"] + "\n") if row["canonical"]
+      f.write(row["name"] + "\n") if row["name"]
     end
     f.close
   end
