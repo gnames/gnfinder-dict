@@ -26,7 +26,7 @@ class Canonicals
              "w:utf-8")
     res.each_with_index do |row, i|
       i += 1
-      puts format("Canonicals row %s", i) if (i % 100_000).zero?
+      puts format("Names row %s", i) if (i % 100_000).zero?
       f.write(row["name"] + "\n") if row["name"]
     end
     f.close

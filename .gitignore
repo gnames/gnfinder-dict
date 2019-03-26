@@ -2,3 +2,4 @@
 .byebug_history
 *.csv
 .env
+data/names.txt
