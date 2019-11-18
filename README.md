@@ -9,6 +9,9 @@ make .env file according to .env.dev
 
 . .env && canonical.rb -- goes to Global Names Index and fetches all data
 
+You will need to create list of canonicals as well ad `data/canonicals.txt`.
+Note that the canonicals are only from 'curated' data.
+
 dict.rb -- creates csv files for dictionaries
 
 filter.rb -- creates dictionaries from canonicals, csv files, and black/grey
