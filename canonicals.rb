@@ -38,7 +38,7 @@ class Canonicals
                      FROM name_strings ns
                        JOIN name_string_indices nsi
                          ON nsi.name_string_id = ns.id
-                     WHERE rank='Genus' AND data_source_id = 181
+                     WHERE rank='genus' AND data_source_id = 181
                        ORDER BY name")
     f = open(File.join(__dir__, "data", "genera.txt"), "w:utf-8")
     res.each_with_index do |row, i|
