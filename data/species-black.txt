@@ -208,6 +208,7 @@ specimens
 ss
 st
 strains
+subgroup
 subsp
 subsp-nov
 subspec
